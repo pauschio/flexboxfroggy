@@ -433,13 +433,6 @@ var game = {
       $('[data-level=' + game.level + ']').addClass('solved');
       $('#next').removeClass('disabled').addClass('animated animation');
     } else {
-      ga('send', {
-        hitType: 'event',
-        eventCategory: level.name,
-        eventAction: 'incorrect',
-        eventLabel: $('#code').val()
-      });
-
       game.changed = true;
       $('#next').removeClass('animated animation').addClass('disabled');
     }
